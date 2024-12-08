@@ -3,7 +3,7 @@
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(800, 800), "Window Title");
+    sf::RenderWindow window(sf::VideoMode(800, 800), "EDITOR");
     sf::CircleShape shape(200.f, 100);
     shape.setFillColor(sf::Color(204, 77, 5)); // Color circle
     shape.setPosition(200, 200); // Center circle
