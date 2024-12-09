@@ -21,9 +21,11 @@
   <ItemGroup>
     <ClCompile Include="Core\Game.cpp" />
     <ClCompile Include="Core\main.cpp" />
+    <ClCompile Include="Graphics\Player.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\LeafEngine\Engine\Core\Game.h" />
+    <ClInclude Include="..\include\LeafEngine\Engine\Graphics\Player.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

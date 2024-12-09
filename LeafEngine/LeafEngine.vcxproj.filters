@@ -21,9 +21,15 @@
     <ClCompile Include="Core\Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Graphics\Player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\LeafEngine\Engine\Core\Game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\LeafEngine\Engine\Graphics\Player.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
