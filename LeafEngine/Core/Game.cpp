@@ -17,10 +17,6 @@ Game::~Game() {
 void Game::Initialize() {
 	this->initGameWindow();
 
-	// test sprite
-	testSprite.setSize(sf::Vector2f(100.0f, 50.0f));
-	testSprite.setFillColor(sf::Color::Green);
-	testSprite.setPosition(gameWidth / 2.0f - 50.0f, gameHeight / 2.0f - 25.0f);
 }
 
 /* Initialize game window */
@@ -58,9 +54,6 @@ void Game::Run() {
 /* Render the game window */
 void Game::Render() {
 	window.clear();
-
-	// test sprite
-	window.draw(testSprite);
 
 	window.display();
 }
