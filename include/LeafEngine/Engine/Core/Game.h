@@ -1,7 +1,8 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include "SFML/Graphics.hpp"
+#include "Graphics/Player.h"
+
 #include "ImGui/imgui.h"
 
 class Game {
@@ -20,6 +21,9 @@ private:
 
 	sf::RenderWindow window;
 	sf::View view;
+
+	// player
+	Player player;
 
 	// core functions
 	void Initialize();

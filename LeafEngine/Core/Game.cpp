@@ -55,6 +55,9 @@ void Game::Run() {
 void Game::Render() {
 	window.clear();
 
+	// render player sprite
+	player.Render(window);
+
 	window.display();
 }
 
