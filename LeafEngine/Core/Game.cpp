@@ -4,7 +4,7 @@ Game::Game() {
 	// default dimensions
 	gameWidth = 640;
 	gameHeight = 480;
-	zoom = 2;
+	zoom = 1;
 
 	this->Initialize();
 }
@@ -16,6 +16,11 @@ Game::~Game() {
 /* Initialize game elements */
 void Game::Initialize() {
 	this->initGameWindow();
+
+	// test sprite
+	testSprite.setSize(sf::Vector2f(100.0f, 50.0f));
+	testSprite.setFillColor(sf::Color::Green);
+	testSprite.setPosition(gameWidth / 2.0f - 50.0f, gameHeight / 2.0f - 25.0f);
 }
 
 /* Initialize game window */
@@ -54,7 +59,8 @@ void Game::Run() {
 void Game::Render() {
 	window.clear();
 
-	// render elements
+	// test sprite
+	window.draw(testSprite);
 
 	window.display();
 }

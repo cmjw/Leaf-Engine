@@ -11,6 +11,8 @@ public:
 
 	void Run();
 
+	sf::RectangleShape testSprite; // test sprite
+
 private:
 	int gameWidth;
 	int gameHeight;
