@@ -1,5 +1,4 @@
-#include "SFML/Graphics.hpp"
-#include "ImGui/imgui.h"
+#include "Core/Game.h"
 
 int main()
 {
