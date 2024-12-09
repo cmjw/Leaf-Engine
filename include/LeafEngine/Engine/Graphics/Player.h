@@ -1,12 +1,14 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include "SFML/Graphics.hpp"
+#include "Input/Input.h"
 
 class Player {
 public:
 	int width;
 	int height;
+
+	float movementSpeed;
 
 	sf::RectangleShape sprite;
 
@@ -19,6 +21,8 @@ public:
 	
 private:
 	void initialize();
+	void updateMovement(float deltaTime);
+	void movePlayer(float dx, float dy, float deltaTime);
 };
 
 #endif // !PLAYER_H

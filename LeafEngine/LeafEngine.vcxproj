@@ -22,10 +22,12 @@
     <ClCompile Include="Core\Game.cpp" />
     <ClCompile Include="Core\main.cpp" />
     <ClCompile Include="Graphics\Player.cpp" />
+    <ClCompile Include="Input\Input.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\LeafEngine\Engine\Core\Game.h" />
     <ClInclude Include="..\include\LeafEngine\Engine\Graphics\Player.h" />
+    <ClInclude Include="..\include\LeafEngine\Engine\Input\Input.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

@@ -64,6 +64,7 @@ void Game::Render() {
 /* Update game elements */
 void Game::Update(float deltaTime) {
 	// update elements
+	player.Update(deltaTime);
 }
 
 /* Cleanup game elements */
