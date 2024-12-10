@@ -10,8 +10,10 @@ Player::~Player() {
 
 /* Initialize the player */
 void Player::initialize() {
-	this->width = 20;
-	this->height = 20;
+
+	// test data
+	this->width = 24;
+	this->height = 48;
 
 	sprite.setSize(sf::Vector2f(width, height));
 	sprite.setFillColor(sf::Color::Blue);
