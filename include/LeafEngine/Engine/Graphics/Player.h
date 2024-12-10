@@ -2,20 +2,16 @@
 #define PLAYER_H
 
 #include "Input/Input.h"
+#include "Graphics/Sprite.h"
 
 #include <nlohmann/json.hpp>
 
 class Player {
 public:
-	int width;
-	int height;
-
-	float movementSpeed;
-
-	sf::RectangleShape sprite;
-
 	Player();
 	~Player();
+
+	Sprite playerSprite;
 
 	// main functions
 	void Render(sf::RenderWindow& window);
@@ -24,7 +20,7 @@ public:
 private:
 	void initialize();
 	void updateMovement(float deltaTime);
-	void movePlayer(float dx, float dy, float deltaTime);
+	//void movePlayer(float dx, float dy, float deltaTime);
 };
 
 #endif // !PLAYER_H
