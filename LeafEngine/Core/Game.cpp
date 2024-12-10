@@ -1,5 +1,8 @@
 #include "Core/Game.h"
 
+const int windowWidth = 640 * 1;
+const int windowHeight = 480 * 1;
+
 Game::Game() {
 	// default dimensions
 	gameWidth = 640;
@@ -22,13 +25,13 @@ void Game::Initialize() {
 /* Initialize game window */
 void Game::initGameWindow() {
 	// create window
-	window.create(sf::VideoMode(gameWidth * zoom, gameHeight * zoom), "Engine");
+	window.create(sf::VideoMode(windowWidth, windowHeight), "Engine");
 
 	view.setSize(gameWidth, gameHeight);
 	view.setCenter(gameWidth / 2, gameHeight / 2);
 
 	// set zoom
-	view.zoom(zoom / 2);
+	view.zoom(zoom);
 	window.setView(view);
 }
 
