@@ -1,12 +1,12 @@
 #include "Core/Game.h"
 
-const int windowWidth = 640 * 1;
-const int windowHeight = 480 * 1;
+const int windowWidth = 320 * 2;
+const int windowHeight = 240 * 2;
 
 Game::Game() {
 	// default dimensions
-	gameWidth = 640;
-	gameHeight = 480;
+	gameWidth = 320;
+	gameHeight = 240;
 	zoom = 1;
 
 	this->Initialize();
