@@ -3,6 +3,8 @@
 
 #include "Input/Input.h"
 
+#include <nlohmann/json.hpp>
+
 class Player {
 public:
 	int width;
