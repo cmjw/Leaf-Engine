@@ -2,6 +2,8 @@
 
 Player::Player() {
 	this->initialize();
+
+	playerSprite.loadTextureImage(STARTING_PLAYER_GRAPHIC);
 }
 
 Player::~Player() {

@@ -14,14 +14,8 @@ void Sprite::initialize() {
 	width = 16;
 	height = 24;
 
-	/*sprite.setSize(sf::Vector2f(width, height));
-	sprite.setFillColor(sf::Color::Red);
-	sprite.setPosition(20, 20);*/
-
-	if (!texture.loadFromFile("../../gameData/starting_graphic.png")) {
-		exit(-1);
-	}
-	sprite.setTexture(texture);
+	// placeholder
+	loadTextureImage("../../gameData/starting_graphic.png");
 
 	movementSpeed = 200.f;
 }
@@ -58,4 +52,12 @@ void Sprite::handleInput(float deltaTime) {
 	if (Input::rightPressed()) {
 		move(1, 0, deltaTime);
 	}
+}
+
+/* Load a texture image for this Sprite */
+void Sprite::loadTextureImage(const std::string filename) {
+	if (!texture.loadFromFile(filename)) {
+		exit(-1);
+	}
+	sprite.setTexture(texture);
 }

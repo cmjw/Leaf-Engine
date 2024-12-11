@@ -24,6 +24,8 @@ public:
 	void handleInput(float deltaTime);
 	void move(float dx, float dy, float deltaTime);
 
+	void loadTextureImage(const std::string filename);
+
 private:
 	void initialize();
 };

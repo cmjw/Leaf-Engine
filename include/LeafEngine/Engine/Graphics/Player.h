@@ -6,6 +6,8 @@
 
 #include <nlohmann/json.hpp>
 
+const std::string STARTING_PLAYER_GRAPHIC = "../../gameData/starting_graphic.png";
+
 class Player {
 public:
 	Player();
