@@ -44,6 +44,8 @@ public:
 
 private:
 	void initialize();
+
+	void handleAnimation(float deltaTime);
 };
 
 #endif // !SPRITE_H

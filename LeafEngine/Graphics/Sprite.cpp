@@ -30,6 +30,7 @@ void Sprite::render(sf::RenderWindow& window) {
 
 /* Update sprite */
 void Sprite::update(float deltaTime) {
+	handleAnimation(deltaTime);
 	handleInput(deltaTime);
 }
 
@@ -48,32 +49,6 @@ void Sprite::setPosition(float x, float y) {
 
 /* Handle user input */
 void Sprite::handleInput(float deltaTime) {
-	timeSinceLastFrame += deltaTime;
-
-	if (timeSinceLastFrame >= animationSpeed) {
-		currentFrame = (currentFrame + 1) % NUM_FRAMES_PER_DIR;
-
-		if (Input::upPressed()) {
-			currentDirection = BACKWARD_ROW;
-		}
-		if (Input::downPressed()) {
-			currentDirection = FORWARD_ROW;
-		}
-		if (Input::leftPressed()) {
-			currentDirection = LEFT_ROW;
-		}
-		if (Input::rightPressed()) {
-			currentDirection = RIGHT_ROW;
-		}
-
-		int x1 = currentFrame * SPRITE_WIDTH;
-		int y1 = currentDirection * SPRITE_HEIGHT;
-
-		sprite.setTextureRect(sf::IntRect(x1, y1, SPRITE_WIDTH, SPRITE_HEIGHT));
-
-		timeSinceLastFrame = 0.f;
-	}
-
 	if (Input::upPressed()) {
 		move(0, -1, deltaTime);
 	}
@@ -85,6 +60,50 @@ void Sprite::handleInput(float deltaTime) {
 	}
 	if (Input::rightPressed()) {
 		move(1, 0, deltaTime);
+	}
+}
+
+/* Handle sprite animation based on input */
+void Sprite::handleAnimation(float deltaTime) {
+	timeSinceLastFrame += deltaTime;
+
+	int lastDirection = currentDirection;
+
+	if (Input::upPressed()) {
+		currentDirection = BACKWARD_ROW;
+	}
+	if (Input::downPressed()) {
+		currentDirection = FORWARD_ROW;
+	}
+	if (Input::leftPressed()) {
+		currentDirection = LEFT_ROW;
+	}
+	if (Input::rightPressed()) {
+		currentDirection = RIGHT_ROW;
+	}
+
+	// if direction has changed, immediately show new frame
+	if (currentDirection != lastDirection) {
+		currentFrame = 0;
+
+		int x1 = currentFrame * SPRITE_WIDTH;
+		int y1 = currentDirection * SPRITE_HEIGHT;
+
+		sprite.setTextureRect(sf::IntRect(x1, y1, SPRITE_WIDTH, SPRITE_HEIGHT));
+
+		timeSinceLastFrame = 0.f;
+	}
+
+	// otherwise animate frames
+	else if (timeSinceLastFrame >= animationSpeed) {
+		currentFrame = (currentFrame + 1) % NUM_FRAMES_PER_DIR;
+
+		int x1 = currentFrame * SPRITE_WIDTH;
+		int y1 = currentDirection * SPRITE_HEIGHT;
+
+		sprite.setTextureRect(sf::IntRect(x1, y1, SPRITE_WIDTH, SPRITE_HEIGHT));
+
+		timeSinceLastFrame = 0.f;
 	}
 }
 
