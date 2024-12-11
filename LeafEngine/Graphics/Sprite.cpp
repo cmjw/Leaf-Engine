@@ -17,7 +17,10 @@ void Sprite::initialize() {
 	// placeholder
 	loadTexture("../../gameData/starting_graphic.png");
 
-	movementSpeed = 200.f;
+	movementSpeed = 150.f;
+	
+	timeSinceLastFrame = 0.0f;
+	animationSpeed = 0.5f;
 }
 
 /* Render sprite */
@@ -27,7 +30,7 @@ void Sprite::render(sf::RenderWindow& window) {
 
 /* Update sprite */
 void Sprite::update(float deltaTime) {
-
+	handleInput(deltaTime);
 }
 
 /* Move sprite */
@@ -45,6 +48,17 @@ void Sprite::setPosition(float x, float y) {
 
 /* Handle user input */
 void Sprite::handleInput(float deltaTime) {
+	timeSinceLastFrame += deltaTime;
+
+	if (timeSinceLastFrame >= animationSpeed) {
+		currentFrame = (currentFrame + 1) % NUM_FRAMES_PER_DIR;
+
+		int x1 = currentFrame * SPRITE_WIDTH;
+		sprite.setTextureRect(sf::IntRect(x1, 0, SPRITE_WIDTH, SPRITE_HEIGHT));
+
+		timeSinceLastFrame = 0.f;
+	}
+
 	if (Input::upPressed()) {
 		move(0, -1, deltaTime);
 	}
@@ -65,4 +79,5 @@ void Sprite::loadTexture(const std::string filename) {
 		exit(-1);
 	}
 	sprite.setTexture(texture);
+	sprite.setTextureRect(sf::IntRect(0, 0, SPRITE_WIDTH, SPRITE_HEIGHT));
 }

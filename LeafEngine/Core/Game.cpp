@@ -1,7 +1,7 @@
 #include "Core/Game.h"
 
-const int windowWidth = 320 * 2;
-const int windowHeight = 240 * 2;
+const int windowWidth = 320 * 3;
+const int windowHeight = 240 * 3;
 
 Game::Game() {
 	// default dimensions

@@ -22,7 +22,7 @@ void Player::render(sf::RenderWindow& window) {
 
 /* Update the player */
 void Player::update(float deltaTime) {
-	playerSprite.handleInput(deltaTime);
+	playerSprite.update(deltaTime);
 }
 
 /* Handle movement */
