@@ -43,3 +43,19 @@ void Sprite::move(float dx, float dy, float deltaTime) {
 
 	sprite.move(newX, newY);
 }
+
+/* Handle user input */
+void Sprite::handleInput(float deltaTime) {
+	if (Input::upPressed()) {
+		move(0, -1, deltaTime);
+	}
+	if (Input::downPressed()) {
+		move(0, 1, deltaTime);
+	}
+	if (Input::leftPressed()) {
+		move(-1, 0, deltaTime);
+	}
+	if (Input::rightPressed()) {
+		move(1, 0, deltaTime);
+	}
+}
