@@ -86,26 +86,27 @@ void Sprite::handleAnimation(float deltaTime) {
 	if (currentDirection != lastDirection) {
 		currentFrame = 0;
 
-		int x1 = currentFrame * SPRITE_WIDTH;
-		int y1 = currentDirection * SPRITE_HEIGHT;
-
-		sprite.setTextureRect(sf::IntRect(x1, y1, SPRITE_WIDTH, SPRITE_HEIGHT));
-
-		timeSinceLastFrame = 0.f;
+		this->nextFrame();
 	}
 
-	// otherwise animate frames
+	// otherwise animate frames normally
 	else if (timeSinceLastFrame >= animationSpeed) {
 		currentFrame = (currentFrame + 1) % NUM_FRAMES_PER_DIR;
 
-		int x1 = currentFrame * SPRITE_WIDTH;
-		int y1 = currentDirection * SPRITE_HEIGHT;
-
-		sprite.setTextureRect(sf::IntRect(x1, y1, SPRITE_WIDTH, SPRITE_HEIGHT));
-
-		timeSinceLastFrame = 0.f;
+		this->nextFrame();
 	}
 }
+
+/* Change sprite frame */
+void Sprite::nextFrame() {
+	int x1 = currentFrame * SPRITE_WIDTH;
+	int y1 = currentDirection * SPRITE_HEIGHT;
+
+	sprite.setTextureRect(sf::IntRect(x1, y1, SPRITE_WIDTH, SPRITE_HEIGHT));
+
+	timeSinceLastFrame = 0.f;
+}
+
 
 /* Load a texture image for this Sprite */
 void Sprite::loadTexture(const std::string filename) {

@@ -24,6 +24,7 @@ public:
 
 	float timeSinceLastFrame;
 	float animationSpeed;
+
 	int currentFrame;
 	int currentDirection;
 
@@ -46,6 +47,7 @@ private:
 	void initialize();
 
 	void handleAnimation(float deltaTime);
+	void nextFrame();
 };
 
 #endif // !SPRITE_H
