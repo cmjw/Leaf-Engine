@@ -3,7 +3,7 @@
 Player::Player() {
 	this->initialize();
 
-	playerSprite.loadTextureImage(STARTING_PLAYER_GRAPHIC);
+	playerSprite.loadTexture(STARTING_PLAYER_GRAPHIC);
 }
 
 Player::~Player() {
@@ -16,16 +16,23 @@ void Player::initialize() {
 }
 
 /* Render the player sprite */
-void Player::Render(sf::RenderWindow& window) {
+void Player::render(sf::RenderWindow& window) {
 	playerSprite.render(window);
 }
 
 /* Update the player */
-void Player::Update(float deltaTime) {
+void Player::update(float deltaTime) {
 	playerSprite.handleInput(deltaTime);
 }
 
 /* Handle movement */
 void Player::updateMovement(float deltaTime) {
 	// sprite movement handled in Sprite class
+}
+
+/* Set the player position */
+void Player::setPosition(float x, float y) {
+	playerSprite.setPosition(x, y);
+	
+	// set position of any other Player elements
 }

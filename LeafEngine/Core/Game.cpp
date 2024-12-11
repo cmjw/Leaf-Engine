@@ -9,7 +9,7 @@ Game::Game() {
 	gameHeight = 240;
 	zoom = 1;
 
-	this->Initialize();
+	this->initialize();
 }
 
 Game::~Game() {
@@ -17,7 +17,7 @@ Game::~Game() {
 }
 
 /* Initialize game elements */
-void Game::Initialize() {
+void Game::initialize() {
 	this->initGameWindow();
 
 }
@@ -49,25 +49,25 @@ void Game::Run() {
 		float deltaTime = clock.restart().asSeconds();
 
 		// update and render
-		this->Update(deltaTime);
-		this->Render();
+		this->update(deltaTime);
+		this->render();
 	}
 }
 
 /* Render the game window */
-void Game::Render() {
+void Game::render() {
 	window.clear();
 
 	// render player sprite
-	player.Render(window);
+	player.render(window);
 
 	window.display();
 }
 
 /* Update game elements */
-void Game::Update(float deltaTime) {
+void Game::update(float deltaTime) {
 	// update elements
-	player.Update(deltaTime);
+	player.update(deltaTime);
 }
 
 /* Cleanup game elements */

@@ -15,7 +15,7 @@ void Sprite::initialize() {
 	height = 24;
 
 	// placeholder
-	loadTextureImage("../../gameData/starting_graphic.png");
+	loadTexture("../../gameData/starting_graphic.png");
 
 	movementSpeed = 200.f;
 }
@@ -38,6 +38,11 @@ void Sprite::move(float dx, float dy, float deltaTime) {
 	sprite.move(newX, newY);
 }
 
+/* Set sprite position */
+void Sprite::setPosition(float x, float y) {
+	sprite.setPosition(x, y);
+}
+
 /* Handle user input */
 void Sprite::handleInput(float deltaTime) {
 	if (Input::upPressed()) {
@@ -55,7 +60,7 @@ void Sprite::handleInput(float deltaTime) {
 }
 
 /* Load a texture image for this Sprite */
-void Sprite::loadTextureImage(const std::string filename) {
+void Sprite::loadTexture(const std::string filename) {
 	if (!texture.loadFromFile(filename)) {
 		exit(-1);
 	}
