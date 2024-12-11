@@ -9,6 +9,11 @@ const int SPRITE_HEIGHT = 28;
 
 const int NUM_SPRITE_DIRS = 4;
 const int NUM_FRAMES_PER_DIR = 3;
+ 
+const int FORWARD_ROW  = 0;
+const int LEFT_ROW     = 1;
+const int RIGHT_ROW    = 2;
+const int BACKWARD_ROW = 3;
 
 class Sprite {
 public:
@@ -20,6 +25,7 @@ public:
 	float timeSinceLastFrame;
 	float animationSpeed;
 	int currentFrame;
+	int currentDirection;
 
 	sf::Sprite sprite;
 	sf::Texture texture;

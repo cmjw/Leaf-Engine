@@ -53,8 +53,23 @@ void Sprite::handleInput(float deltaTime) {
 	if (timeSinceLastFrame >= animationSpeed) {
 		currentFrame = (currentFrame + 1) % NUM_FRAMES_PER_DIR;
 
+		if (Input::upPressed()) {
+			currentDirection = BACKWARD_ROW;
+		}
+		if (Input::downPressed()) {
+			currentDirection = FORWARD_ROW;
+		}
+		if (Input::leftPressed()) {
+			currentDirection = LEFT_ROW;
+		}
+		if (Input::rightPressed()) {
+			currentDirection = RIGHT_ROW;
+		}
+
 		int x1 = currentFrame * SPRITE_WIDTH;
-		sprite.setTextureRect(sf::IntRect(x1, 0, SPRITE_WIDTH, SPRITE_HEIGHT));
+		int y1 = currentDirection * SPRITE_HEIGHT;
+
+		sprite.setTextureRect(sf::IntRect(x1, y1, SPRITE_WIDTH, SPRITE_HEIGHT));
 
 		timeSinceLastFrame = 0.f;
 	}
