@@ -18,7 +18,7 @@ void Sprite::initialize() {
 	sprite.setFillColor(sf::Color::Red);
 	sprite.setPosition(20, 20);*/
 
-	if (!texture.loadFromFile("starting_graphic.png")) {
+	if (!texture.loadFromFile("../../gameData/starting_graphic.png")) {
 		exit(-1);
 	}
 	sprite.setTexture(texture);
