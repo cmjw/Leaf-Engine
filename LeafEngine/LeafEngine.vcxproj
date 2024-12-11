@@ -22,11 +22,13 @@
     <ClCompile Include="Core\Game.cpp" />
     <ClCompile Include="Core\main.cpp" />
     <ClCompile Include="Graphics\Player.cpp" />
+    <ClCompile Include="Graphics\Sprite.cpp" />
     <ClCompile Include="Input\Input.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\LeafEngine\Engine\Core\Game.h" />
     <ClInclude Include="..\include\LeafEngine\Engine\Graphics\Player.h" />
+    <ClInclude Include="..\include\LeafEngine\Engine\Graphics\Sprite.h" />
     <ClInclude Include="..\include\LeafEngine\Engine\Input\Input.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

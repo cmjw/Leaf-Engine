@@ -26,10 +26,10 @@ private:
 	Player player;
 
 	// core functions
-	void Initialize();
-	void Render();
-	void Update(float deltaTime);
-	void Cleanup();
+	void initialize();
+	void render();
+	void update(float deltaTime);
+	void cleanup();
 
 	void initGameWindow();
 };
