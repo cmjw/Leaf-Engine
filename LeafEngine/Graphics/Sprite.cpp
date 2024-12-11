@@ -14,9 +14,14 @@ void Sprite::initialize() {
 	width = 16;
 	height = 24;
 
-	sprite.setSize(sf::Vector2f(width, height));
+	/*sprite.setSize(sf::Vector2f(width, height));
 	sprite.setFillColor(sf::Color::Red);
-	sprite.setPosition(20, 20);
+	sprite.setPosition(20, 20);*/
+
+	if (!texture.loadFromFile("starting_graphic.png")) {
+		exit(-1);
+	}
+	sprite.setTexture(texture);
 
 	movementSpeed = 200.f;
 }

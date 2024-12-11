@@ -10,7 +10,8 @@ public:
 
 	float movementSpeed;
 
-	sf::RectangleShape sprite;
+	sf::Sprite sprite;
+	sf::Texture texture;
 
 	Sprite();
 	~Sprite();
