@@ -29,7 +29,7 @@ private:
 	void initialize();
 	void render();
 	void update(float deltaTime);
-	void Cleanup();
+	void cleanup();
 
 	void initGameWindow();
 };

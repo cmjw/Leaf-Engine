@@ -13,7 +13,7 @@ Game::Game() {
 }
 
 Game::~Game() {
-	Cleanup();
+	cleanup();
 }
 
 /* Initialize game elements */
@@ -71,6 +71,6 @@ void Game::update(float deltaTime) {
 }
 
 /* Cleanup game elements */
-void Game::Cleanup() {
+void Game::cleanup() {
 	
 }
