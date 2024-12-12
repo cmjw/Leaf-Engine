@@ -21,6 +21,8 @@ void Sprite::initialize() {
 	
 	timeSinceLastFrame = 0.0f;
 	animationSpeed = 0.5f;
+
+	currentDirection = FORWARD_ROW;
 }
 
 /* Render sprite */
