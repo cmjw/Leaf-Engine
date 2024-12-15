@@ -1,6 +1,8 @@
 #include "SFML/Graphics.hpp"
 #include "ImGui/imgui.h"
 
+#include "Editor.h"
+
 int main()
 {
     sf::RenderWindow window(sf::VideoMode(800, 800), "EDITOR");
