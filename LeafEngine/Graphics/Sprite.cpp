@@ -23,6 +23,7 @@ void Sprite::initialize() {
 	animationSpeed = 0.5f;
 
 	currentDirection = FORWARD_ROW;
+	currentFrame = 1;
 }
 
 /* Render sprite */
@@ -86,13 +87,18 @@ void Sprite::handleAnimation(float deltaTime) {
 
 	// if direction has changed, immediately show new frame
 	if (currentDirection != lastDirection) {
-		currentFrame = 0;
+		currentFrame = 1;
 
 		this->nextFrame();
 	}
 
 	// otherwise animate frames normally
 	else if (timeSinceLastFrame >= animationSpeed) {
+		//if (currentFrame % (NUM_FRAMES_PER_DIR - 1) == 0) {
+		//	// last frame, go to middle frame for 3 frame pattern
+		//	currentFrame = 1;
+		//}
+		
 		currentFrame = (currentFrame + 1) % NUM_FRAMES_PER_DIR;
 
 		this->nextFrame();
