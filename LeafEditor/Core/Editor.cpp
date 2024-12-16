@@ -16,7 +16,7 @@ void Editor::initialize() {
 	// create window
 	window.create(sf::VideoMode(desktopMode.width, desktopMode.height), "Game Editor", sf::Style::Default);
 	
-	//ImGui::SFML::Init(window);
+	ImGui::SFML::Init(window);
 }
 
 /* Run editor program */

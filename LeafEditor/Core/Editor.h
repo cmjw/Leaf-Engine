@@ -5,6 +5,9 @@
 
 #include <SFML/Graphics.hpp>
 
+#include <imgui.h>
+#include <imgui-SFML.h>
+
 const int EDITOR_WIDTH = 1200;
 const int EDITOR_HEIGHT = 800;
 
