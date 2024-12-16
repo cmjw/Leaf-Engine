@@ -4,7 +4,6 @@
 #include "Core/Game.h"
 
 #include <SFML/Graphics.hpp>
-
 #include <imgui.h>
 #include <imgui-SFML.h>
 
@@ -25,6 +24,7 @@ private:
 	// main functions
 	void initialize();
 	void render();
+	void cleanup();
 
 	// menu bar
 	// ...
