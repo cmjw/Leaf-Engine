@@ -3,7 +3,7 @@
 
 #include "Core/Game.h"
 
-#include "SFML/Graphics.hpp"
+#include <SFML/Graphics.hpp>
 #include "ImGui/imgui.h"
 #include "ImGui/imconfig-SFML.h"
 

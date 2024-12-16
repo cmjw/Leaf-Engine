@@ -3,7 +3,7 @@
 
 #include "Input/Input.h"
 
-#include "SFML/Graphics.hpp"
+#include <SFML/Graphics.hpp>
 
 class Sprite {
 public:
