@@ -3,8 +3,6 @@
 
 #include "Graphics/Player.h"
 
-#include "ImGui/imgui.h"
-
 class Game {
 public:
 	Game();
