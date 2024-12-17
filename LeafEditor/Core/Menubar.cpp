@@ -48,9 +48,8 @@ void Editor::initMenuBar() {
 			si.cb = sizeof(si);
 			ZeroMemory(&pi, sizeof(pi));
 
-			// Start the process using a relative path
 			if (CreateProcess(
-				"Engine.exe",      // Relative path to your executable
+				"LeafEngine.exe",  // Relative path to executable
 				NULL,              // Command line arguments
 				NULL,              // Process handle not inheritable
 				NULL,              // Thread handle not inheritable
@@ -61,6 +60,7 @@ void Editor::initMenuBar() {
 				&si,               // Pointer to STARTUPINFO structure
 				&pi)               // Pointer to PROCESS_INFORMATION structure
 				) {
+
 				// Successfully started the process
 				CloseHandle(pi.hProcess);
 				CloseHandle(pi.hThread);
