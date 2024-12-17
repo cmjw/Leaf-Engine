@@ -14,7 +14,7 @@ void Editor::initialize() {
 	sf::VideoMode desktopMode = sf::VideoMode::getDesktopMode();
 
 	// create window
-	window.create(sf::VideoMode(desktopMode.width, desktopMode.height), "Leaf Editor", sf::Style::Default);
+	window.create(sf::VideoMode(EDITOR_WIDTH, EDITOR_HEIGHT), "Leaf Editor", sf::Style::Default);
 	
 	ImGui::SFML::Init(window);
 
@@ -77,20 +77,40 @@ void Editor::cleanup() {
 void Editor::initMenuBar() {
 	if (ImGui::BeginMainMenuBar()) {
 		if (ImGui::BeginMenu("File")) {
-			if (ImGui::MenuItem("Load Project")) {
+			if (ImGui::MenuItem("Load")) {
 				// Load a project/data folder
 			}
+
 			if (ImGui::MenuItem("Save")) {
 				// Save the current data folder 
 			}
-			if (ImGui::MenuItem("Close Project")) {
 
+			if (ImGui::MenuItem("Close")) {
+				// Close the current project
 			}
+
 			if (ImGui::MenuItem("Exit")) {
+				// Exit the editor
 				window.close();
+			}
+
+			ImGui::EndMenu();
+		}
+
+		if (ImGui::BeginMenu("View")) {
+			if (ImGui::MenuItem("Toggle Dark/Light Mode")) {
+				// Switch between light and dark mode
+				isDarkMode = !isDarkMode;
+				if (isDarkMode) {
+					ImGui::StyleColorsDark();
+				}
+				else {
+					ImGui::StyleColorsLight();
+				}
 			}
 			ImGui::EndMenu();
 		}
+
 		ImGui::EndMainMenuBar();
 	}
 }
@@ -100,6 +120,7 @@ void Editor::renderMenuBar() {
 	sf::Vector2u windowSize = window.getSize();
 	float menuBarHeight = ImGui::GetFrameHeight();
 
-	ImGui::SetNextWindowPos(ImVec2(0, menuBarHeight));  // Position window just below the menu bar
+	// position window just below the menu bar
+	ImGui::SetNextWindowPos(ImVec2(0, menuBarHeight)); 
 	ImGui::SetNextWindowSize(ImVec2(windowSize.x, windowSize.y - menuBarHeight));
 }
