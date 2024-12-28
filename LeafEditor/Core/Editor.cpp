@@ -14,7 +14,7 @@ void Editor::initialize() {
 	sf::VideoMode desktopMode = sf::VideoMode::getDesktopMode();
 
 	// create window
-	window.create(sf::VideoMode(desktopMode.width, desktopMode.height), "Leaf Editor", sf::Style::Default);
+	window.create(sf::VideoMode(EDITOR_WIDTH, EDITOR_HEIGHT), "Leaf Editor", sf::Style::Default);
 	
 	ImGui::SFML::Init(window);
 
@@ -71,35 +71,4 @@ void Editor::render() {
 /* Cleanup resources */
 void Editor::cleanup() {
 	ImGui::SFML::Shutdown();
-}
-
-/* Initialize menu bar */
-void Editor::initMenuBar() {
-	if (ImGui::BeginMainMenuBar()) {
-		if (ImGui::BeginMenu("File")) {
-			if (ImGui::MenuItem("Load Project")) {
-				// Load a project/data folder
-			}
-			if (ImGui::MenuItem("Save")) {
-				// Save the current data folder 
-			}
-			if (ImGui::MenuItem("Close Project")) {
-
-			}
-			if (ImGui::MenuItem("Exit")) {
-				window.close();
-			}
-			ImGui::EndMenu();
-		}
-		ImGui::EndMainMenuBar();
-	}
-}
-
-/* Render menu bar */
-void Editor::renderMenuBar() {
-	sf::Vector2u windowSize = window.getSize();
-	float menuBarHeight = ImGui::GetFrameHeight();
-
-	ImGui::SetNextWindowPos(ImVec2(0, menuBarHeight));  // Position window just below the menu bar
-	ImGui::SetNextWindowSize(ImVec2(windowSize.x, windowSize.y - menuBarHeight));
 }
