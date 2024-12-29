@@ -21,7 +21,7 @@ void Game::initialize() {
 	this->initGameWindow();
 
 	// initialize starting Map
-	map = new Map(10, 20, STARTING_PLAYER_MAP, STARTING_PLAYER_MAP);
+	map = new Map(4, 3, STARTING_PLAYER_MAP, STARTING_TILESET);
 }
 
 /* Initialize game window */
