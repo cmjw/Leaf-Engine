@@ -20,6 +20,8 @@ Game::~Game() {
 void Game::initialize() {
 	this->initGameWindow();
 
+	// initialize starting Map
+	map = new Map(4, 3, STARTING_PLAYER_MAP, STARTING_TILESET);
 }
 
 /* Initialize game window */
@@ -57,6 +59,9 @@ void Game::Run() {
 /* Render the game window */
 void Game::render() {
 	window.clear();
+
+	// render map
+	map->render(window);
 
 	// render player sprite
 	player.render(window);

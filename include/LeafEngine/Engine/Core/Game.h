@@ -2,6 +2,7 @@
 #define GAME_H
 
 #include "Graphics/Player.h"
+#include "Graphics/Map.h"
 
 class Game {
 public:
@@ -22,6 +23,9 @@ private:
 
 	// player
 	Player player;
+
+	// map
+	Map* map;
 
 	// core functions
 	void initialize();

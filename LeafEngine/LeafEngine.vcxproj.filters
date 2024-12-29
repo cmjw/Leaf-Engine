@@ -30,6 +30,9 @@
     <ClCompile Include="Graphics\Sprite.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Graphics\Map.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\LeafEngine\Engine\Core\Game.h">
@@ -42,6 +45,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\include\LeafEngine\Engine\Graphics\Sprite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\LeafEngine\Engine\Graphics\Map.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
