@@ -2,6 +2,7 @@
 #define GAME_H
 
 #include "Graphics/Player.h"
+#include "Graphics/Map.h"
 
 class Game {
 public:
