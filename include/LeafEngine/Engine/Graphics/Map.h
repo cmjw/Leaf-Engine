@@ -3,7 +3,8 @@
 
 #include "Input/Input.h"
 
-const std::string STARTING_PLAYER_MAP = "../../data/starting_graphic.png";
+const std::string STARTING_TILESET = "../../data/tileset.png";
+const std::string STARTING_PLAYER_MAP = "../../data/map.json";
 
 #define TILE_SIZE 16 // for now restrict to assume 16x16 tiles
 
