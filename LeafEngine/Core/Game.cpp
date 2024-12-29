@@ -60,6 +60,9 @@ void Game::Run() {
 void Game::render() {
 	window.clear();
 
+	// render map
+	map->render(window);
+
 	// render player sprite
 	player.render(window);
 

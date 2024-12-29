@@ -22,6 +22,8 @@ public:
 
 	void loadMapDataFromFile(const std::string& mapDataPath);
 
+	void render(sf::RenderWindow& window);
+
 private:
 	int width; /* width in tiles */
 	int height; /* height in tiles */
