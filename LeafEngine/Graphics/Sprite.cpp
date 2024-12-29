@@ -15,7 +15,7 @@ void Sprite::initialize() {
 	height = 24;
 
 	// placeholder
-	loadTexture("../../gameData/starting_graphic.png");
+	loadTexture("../../data/starting_graphic.png");
 
 	movementSpeed = 200.f;
 }

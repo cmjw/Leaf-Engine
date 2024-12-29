@@ -6,7 +6,7 @@
 
 #include <nlohmann/json.hpp>
 
-const std::string STARTING_PLAYER_GRAPHIC = "../../gameData/starting_graphic.png";
+const std::string STARTING_PLAYER_GRAPHIC = "../../data/starting_graphic.png";
 
 class Player {
 public:
