@@ -70,6 +70,7 @@ void Map::render(sf::RenderWindow& window) {
 			int posX = mapData[j][i];
 			int posY = 0;
 
+			// for 4x4 tileset
 			sprite.setTextureRect(sf::IntRect(TILE_SIZE * posX, TILE_SIZE * posY, TILE_SIZE, TILE_SIZE));
 
 			sprite.setPosition(i * TILE_SIZE, j * TILE_SIZE);
