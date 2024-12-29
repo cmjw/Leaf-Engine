@@ -17,6 +17,8 @@ Map::Map(int width, int height, const std::string& mapDataPath, const std::strin
 		exit(-1);
 	}
 
+	sprite.setTexture(tileset);
+
 	// load map data
 	// ...
 }
