@@ -13,7 +13,7 @@ void Editor::initMenuBar() {
 			}
 
 			if (ImGui::MenuItem("Close")) {
-				// Close the current project
+				// Close the current project folder
 			}
 
 			if (ImGui::MenuItem("Exit")) {
@@ -25,6 +25,7 @@ void Editor::initMenuBar() {
 		}
 
 		if (ImGui::BeginMenu("View")) {
+
 			if (ImGui::MenuItem("Toggle Dark/Light Mode")) {
 				// Switch between light and dark mode
 				isDarkMode = !isDarkMode;
