@@ -24,6 +24,9 @@ private:
 	// player
 	Player player;
 
+	// map
+	Map* map;
+
 	// core functions
 	void initialize();
 	void render();

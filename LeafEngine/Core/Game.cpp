@@ -20,6 +20,8 @@ Game::~Game() {
 void Game::initialize() {
 	this->initGameWindow();
 
+	// initialize starting Map
+	map = new Map(10, 20, STARTING_PLAYER_MAP, STARTING_PLAYER_MAP);
 }
 
 /* Initialize game window */

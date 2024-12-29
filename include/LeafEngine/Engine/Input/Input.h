@@ -2,6 +2,7 @@
 #define INPUT_H
 
 #include <SFML/Graphics.hpp>
+#include <iostream>
 
 const sf::Keyboard::Key UP    = sf::Keyboard::W;
 const sf::Keyboard::Key DOWN  = sf::Keyboard::S;
