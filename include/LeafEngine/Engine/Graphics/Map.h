@@ -2,6 +2,8 @@
 #define MAP_H
 
 #include "Input/Input.h"
+#include <nlohmann/json.hpp>
+#include <fstream>
 
 const std::string STARTING_TILESET = "../../data/tileset.png";
 const std::string STARTING_PLAYER_MAP = "../../data/map.json";
@@ -17,6 +19,8 @@ public:
 
 	int getWidth();
 	int getHeight();
+
+	void loadMapDataFromFile(const std::string& mapDataPath);
 
 private:
 	int width; /* width in tiles */
